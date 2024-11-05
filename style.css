@@ -322,6 +322,8 @@ footer .line-footer p a{
 
     .especialidades .flex{
         padding-left: 20px;
+        text-align: center;
+        justify-content: center;
     }
 
     .especialidades .card{
