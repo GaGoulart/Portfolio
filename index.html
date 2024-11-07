@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
     <link rel="icon" href="Imagens/Logotipo G.png" type="Logotipo">
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,12 +36,33 @@
 
             <div class="btn_contato"><!--btn_contato-->
                 <a href="#form">
-                    <button>
-                        Contato
-                    </button>
+                    <button>Contato</button>
                 </a>
             </div><!--btn_contato-->
-        </div><!--interface-->
+
+        <div class="btn-abrir-menu" id="btn-menu">
+            <i class="bi bi-list"></i>
+        </div>
+
+        <div class="menu-mobile" id="menu-mobile">
+            <div class="botao-x">
+                <i class="bi bi-x-lg"></i>
+            </div>
+
+            <nav><!--menu-desktop-MOBILE-->
+                <ul>
+                    <li><a href="">Início</a></li>
+                    <li><a href="">Especialidades</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav><!--menu-desktop-MOBILE-->
+
+        </div><!--menu-mobile-->
+
+        <div class="overlay-menu" id="overlay-menu"></div>
+    </div><!--interface-->
     </header>
 
     <main>
@@ -86,6 +108,13 @@
                         <h3>SQL</h3>
                         <p>SQL - Intermediário</p>
                     </div><!--card-->
+
+                    <div class="card">
+                        <i class="bi bi-filetype-js"></i>
+                        <h3>JavaScript</h3>
+                        <p>JS - Iniciante</p>
+                    </div><!--card-->
+
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--especialidades-->
@@ -123,7 +152,7 @@
             <div class="interface">
                 <h2 class="titulo">FALE <span>COMIGO.</span></h2>
 
-                <form action="">
+                <form action="" autocomplete="off">
                     <input type="text" name="" id="" placeholder="Seu Nome completo:" required>
                     <input type="text" name="" id="" placeholder="Seu e-mail:" required>
                     <input type="text" name="" id="" placeholder="Seu celular:">
@@ -153,7 +182,7 @@
                         <a href="https://www.instagram.com/ga_goulartt/"><button><i class="bi bi-instagram"></i></button></a>
 
                     </div><!--btn-social-->
-                 </div>
+                 </div><!--flex-->
             </div><!--line-footer-->
 
             <div class="line-footer borda">

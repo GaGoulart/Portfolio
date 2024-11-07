@@ -54,7 +54,7 @@ header a{
     transition: .2s;
 }
 
-header a:hover{
+header nav.menu-desktop a:hover{
     color: #fff;
     transform: scale(1.10);
 }
@@ -63,7 +63,7 @@ header nav ul{
     list-style-type: none;
 }
 
-header nav ul li{
+header nav.menu-desktop ul li{
     display: inline-block;
     padding: 0 40px;
 }
@@ -78,6 +78,7 @@ header nav ul li{
     cursor: pointer;
     color: #000000;
     transition: .2s;
+    display: inline-block;
 }
 
 section.topo-do-site{
@@ -234,7 +235,7 @@ form textarea::placeholder{
 form textarea{
     resize: none;
     max-height: 180px;
-    color: #2b12f0;
+    color: #000000;
 }
 
 form .btn-enviar{
@@ -289,6 +290,10 @@ footer .line-footer p a{
     h2 .titulo{
         font-size: 35px;
         line-height: 30px;
+    }
+
+    .btn_contato button{
+        display: none;
     }
 
     /* CABEÇALHO */
@@ -370,8 +375,72 @@ footer .line-footer p a{
         padding: 80px 4%;
         box-shadow: 0 0 40px 10px #ffff;
     }
-    
+}
+
+/*Parte Mobile*/
 
 
+.btn-abrir-menu i{
+    color: #2b12f0;
+    font-size: 40px;
+    padding-right: 15px;
+}
+
+.menu-mobile{
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .6s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #2b12f0;
+    color: #000;
+}
+
+.overlay-menu{
+    background-color: #00000099;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+.menu-mobile .botao-x{
+    padding: 20px 5%;
+}
+
+.menu-mobile .botao-x i{
+    color: #2b12f0;
+    font-size: 32px;
 
 }
+
