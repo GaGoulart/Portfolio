@@ -17,3 +17,9 @@ menu.addEventListener('click', ()=>{
 overlay.addEventListener('click', ()=>{
     menu.classList.remove('abrir-menu')
 })
+
+/*Adicionar certo o numero de telefone*/
+/*$('#telefone').mask('(00) 00000-0000');: Aplica uma máscara ao campo de telefone no formato (XX) XXXXX-XXXX*/
+$(document).ready(function(){
+    $('#telefone').mask('(00) 00000-0000');
+});

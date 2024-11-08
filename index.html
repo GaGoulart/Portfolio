@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="menu.js" defer></script>
+
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <!--FIM-JQUERY-->
     <link rel="icon" href="Imagens/Logotipo G.png" type="Logotipo">
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,6 +49,8 @@
             <i class="bi bi-list"></i>
         </div>
 
+        <!--Parte MENU-->
+
         <div class="menu-mobile" id="menu-mobile">
             <div class="botao-x">
                 <i class="bi bi-x-lg"></i>
@@ -51,9 +58,9 @@
 
             <nav><!--menu-desktop-MOBILE-->
                 <ul>
-                    <li><a href="">Início</a></li>
-                    <li><a href="">Especialidades</a></li>
-                    <li><a href="">Sobre</a></li>
+                    <li><a href="#topo-do-site">Início</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#">Projetos</a></li>
                     <li><a href="#">Contato</a></li>
                 </ul>
@@ -154,8 +161,8 @@
 
                 <form action="" autocomplete="off">
                     <input type="text" name="" id="" placeholder="Seu Nome completo:" required>
-                    <input type="text" name="" id="" placeholder="Seu e-mail:" required>
-                    <input type="text" name="" id="" placeholder="Seu celular:">
+                    <input type="email" name="" id="" placeholder="Seu e-mail:" required>
+                    <input type="text" name="" id="telefone" placeholder="Seu celular:" required>
                     <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
 
                     <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
