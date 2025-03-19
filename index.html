@@ -35,7 +35,6 @@
                     <li><a href="#topo-do-site">Início</a></li>
                     <li><a href="#especialidades">Especialidades</a></li>
                     <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#">Projetos</a></li>
                 </ul>
             </nav><!--menu-desktop-->
 
@@ -61,8 +60,7 @@
                     <li><a href="#topo-do-site">Início</a></li>
                     <li><a href="#especialidades">Especialidades</a></li>
                     <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#">Projetos</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#form">Contato</a></li>
                 </ul>
             </nav><!--menu-desktop-MOBILE-->
 
@@ -81,7 +79,7 @@
                         <p>Buscando oportunidades para trabalhar dentro da área de tecnologia! Focando em programação!</p>
 
                         <div class="btn_contato">
-                            <a href="#">
+                            <a href="#form">
                                 <button>Entre em Contato</button>
                             </a>
                         </div>
@@ -158,18 +156,43 @@
         <section class="formulario" id="form">
             <div class="interface">
                 <h2 class="titulo">FALE <span>COMIGO.</span></h2>
-
-                <form action="" autocomplete="off">
-                    <input type="text" name="" id="" placeholder="Seu Nome completo:" required>
-                    <input type="email" name="" id="" placeholder="Seu e-mail:" required>
-                    <input type="text" name="" id="telefone" placeholder="Seu celular:" required>
-                    <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
-
-                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
-
+        
+                <form id="contactForm" autocomplete="off">
+                    <input type="text" name="nome" id="nome" placeholder="Seu Nome completo:" required>
+                    <input type="email" name="email" id="email" placeholder="Seu e-mail:" required>
+                    <input type="text" name="telefone" id="telefone" placeholder="Seu celular:" required>
+                    <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem" required></textarea>
+        
+                    <div class="btn-enviar">
+                        <input type="submit" value="ENVIAR">
+                    </div>
                 </form>
             </div><!--interface-->
-        </section><!--formulario-->
+        </section>
+        
+        <script>
+            document.getElementById("contactForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Impede o envio padrão do formulário
+        
+                // Captura os valores dos campos
+                let nome = document.getElementById("nome").value;
+                let email = document.getElementById("email").value;
+                let telefone = document.getElementById("telefone").value;
+                let mensagem = document.getElementById("mensagem").value;
+        
+                // Simula o envio dos dados (substitua por uma requisição real, se necessário)
+                console.log("Nome:", nome);
+                console.log("Email:", email);
+                console.log("Telefone:", telefone);
+                console.log("Mensagem:", mensagem);
+        
+                // Feedback para o usuário
+                alert("Mensagem enviada com sucesso!");
+        
+                // Opcional: Resetar o formulário
+                document.getElementById("contactForm").reset();
+            });
+        </script><!--formulario-->
 
     </main>
 
